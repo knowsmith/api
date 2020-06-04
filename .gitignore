@@ -4,6 +4,7 @@ node_modules/
 # ENVIRONMENT VARIABLES
 .env
 .env.test
+.env.*
 
 # NPM CACHE
 .npm
