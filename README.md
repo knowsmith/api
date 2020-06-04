@@ -6,14 +6,12 @@ A basic express API to handle API requests made by various clients, and act as a
 
 ## Installation
 
-    #### npm install
+    ** npm install **
 
-    #### npm start
-
+    ** npm start **
         For starting in production mode
 
-    #### npm run dev
-
+    ** npm run dev **
         For starting in development mode
 
 ### TODO
