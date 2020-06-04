@@ -1,4 +1,5 @@
 const express = require('express');
+const router = require('./routes');
 
 const app = express();
 
@@ -9,5 +10,7 @@ app.get('/', (req, res) => {
         message: 'Hello WORLD!'
     });
 });
+
+app.use('/messages', router.message);
 
 module.exports = app;
