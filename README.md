@@ -18,6 +18,6 @@ For starting in development mode
 
 ### TODO
 
-    [ ] Set up express and npm scripts
-    [ ] Run Mongodb connection and test
-    [ ] Write documentation for Installation
+[x]Set up express and npm scripts
+[ ]Run Mongodb connection and test
+[x]Write documentation for Installation
