@@ -4,8 +4,8 @@
     "description": "KnowSmith API",
     "main": "server.js",
     "scripts": {
-        "start": "node -r dotenv/config server.js dotenv_config_path=./.env.prod",
-        "dev": "nodemon -r dotenv/config server.js dotenv_config_path=./.env.dev"
+        "start": "NODE_ENV=production node -r dotenv/config server.js dotenv_config_path=./.env.prod",
+        "dev": "NODE_ENV=development nodemon -r dotenv/config server.js dotenv_config_path=./.env.dev"
     },
     "repository": {
         "type": "git",
@@ -20,7 +20,9 @@
     "dependencies": {
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
-        "mongoose": "^5.9.17"
+        "mongoose": "^5.9.17",
+        "morgan": "^1.10.0",
+        "validator": "^13.0.0"
     },
     "devDependencies": {
         "nodemon": "^2.0.4"

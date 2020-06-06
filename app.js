@@ -1,9 +1,14 @@
 const express = require('express');
-const router = require('./routes');
+const morgan = require('morgan');
+
+const apiRouter = require('./routes');
 
 const app = express();
 
 app.use(express.json());
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'));
+}
 
 app.get('/', (req, res) => {
     res.json({
@@ -11,6 +16,12 @@ app.get('/', (req, res) => {
     });
 });
 
-app.use('/messages', router.message);
+app.use('/api/v1', apiRouter);
+
+app.use((err, req, res, next) => {
+    return res.status(500).json({
+        error: err
+    });
+});
 
 module.exports = app;
