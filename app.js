@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 app.use('/api/v1', apiRouter);
 
 app.use((err, req, res, next) => {
+    console.log(err);
     return res.status(500).json({
         error: err
     });
